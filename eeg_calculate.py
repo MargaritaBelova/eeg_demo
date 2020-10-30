@@ -88,13 +88,8 @@ class T_statistic:
 
     def __init__(self, freedom_degree, epsilons):
         self._freedom_degree = freedom_degree
-        #todo: it will be not useful later!
-        #self._epsilons = epsilons
         quantils = np.array(list((t.ppf(1 - eps/2, df=self._freedom_degree, loc=0, scale=1) for eps in epsilons)))
         self._quantils_div_by_eps = quantils / epsilons
-
-#    def get_epsilons(self):
-#        return self._epsilons
 
     @staticmethod
     def get_quantil_div_by_eps(eps, freedom_degree):

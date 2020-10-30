@@ -24,19 +24,6 @@ def draw_stationary_point_seq(filename, electrode, shift, level=None):
         plt.xlabel("gap's number", fontsize=14)
         plt.show()
 
-# todo: delete it
-"""
-def draw_stationary_point_seq_pdf(filename, electrode, shift=5, bins=9):
-    # draw pdf for stationary points sequence
-    with open(filename, 'r') as file:
-        seq = np.loadtxt(file)  # 78 points
-    plt.hist(seq, bins=bins, density=True)
-    plt.xlabel('$\\rho*$')
-    plt.ylabel('$f(\\rho)$')
-    plt.title('electrode №{}: pdf for {} stationary points, shift={}; {} bins'.format(electrode, seq.size, shift, bins))
-    plt.grid()
-    plt.show()
-"""
 
 def draw_EEG_sample(seq, electrode_num, save_fig=False):
     figure = plt.figure(num=None, figsize=(20, 6))

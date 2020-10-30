@@ -1,8 +1,7 @@
 import numpy as np
 from os import path
 
-
-class Singleton:    # serves as parent for singleton in/out classes
+class Singleton:
     instance = None
 
     def __new__(cls, *args, **kwargs):
